@@ -24,7 +24,7 @@ public class SuperheroService {
         ArrayList<SuperheroModel> allSuperHeros = (ArrayList<SuperheroModel>) this.getAllSuperHeros();
         ArrayList<SuperheroModel> superHeroes = new ArrayList<>();
         for (SuperheroModel superheroModel : allSuperHeros) {
-            if (superheroModel.getName().toLowerCase().contains(name.toLowerCase())) {
+            if (superheroModel.getHeroName().toLowerCase().contains(name.toLowerCase())) {
                 superHeroes.add(superheroModel);
             }
         }
@@ -37,10 +37,12 @@ public class SuperheroService {
 
     }
 
+    /*
     public List<SuperheroModel> editSuperhero(String id) {
+
         String[] data = id.split(",");
         try {
-            SuperheroModel superheroToEdit = new SuperheroModel(data[0], data[1], data[2], Integer.parseInt(data[3]), Double.parseDouble(data[4]));
+            SuperheroModel superheroToEdit = new SuperheroModel(data[0], data[1], Integer.parseInt(data[3]), Double.parseDouble(data[4]));
             ArrayList<SuperheroModel> superheroes = (ArrayList<SuperheroModel>) getAllSuperHeros();
             boolean superheroFound = false;
             for (SuperheroModel superheroModel: superheroes) {
@@ -59,6 +61,6 @@ public class SuperheroService {
             return new ArrayList<>();
         }
     }
-
+*/
 
 }
